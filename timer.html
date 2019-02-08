@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Timer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,600" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+  <div id="box-wrapper">
+    <div id="timer-wrapper">
+      <div id="mode-selection-container">
+        <div id="selection-bar"></div>
+        <button id="timer-mode-btn" value="timer">
+          <i class="fas fa-hourglass-half"></i>
+          <span>Timer</span>
+        </button>
+        <button id="stopwatch-mode-btn" value="stopwatch">
+          <i class="fas fa-stopwatch"></i>
+          <span>Stopwatch</span>
+        </button>
+        <button id="alarm-mode-btn" value="alarm">
+          <i class="fas fa-bell"></i>
+          <span>Alarm</span>
+        </button>
+      </div>
+
+      <div id="timer-container">
+        <div id="hours-container">
+          <button id="increase-hour" class="time-control-btn" value="increase">
+            <i class="fas fa-angle-up"></i>
+          </button>
+          <span id="timer-hours" class="timer-time"></span>
+          <button id="decrease-hour" class="time-control-btn" value="decrease" disabled>
+            <i class="fas fa-angle-down"></i>
+          </button>
+        </div>
+        <div id="minutes-container">
+          <button id="increase-minute" class="time-control-btn" value="increase">
+            <i class="fas fa-angle-up"></i>
+          </button>
+          <span id="timer-minutes" class="timer-time"></span>
+          <button id="decrease-minute" class="time-control-btn" value="decrease" disabled>
+            <i class="fas fa-angle-down"></i>
+          </button>
+        </div>
+        <div id="seconds-container">
+          <button id="increase-second" class="time-control-btn" value="increase">
+            <i class="fas fa-angle-up"></i>
+          </button>
+          <span id="timer-seconds" class="timer-time"></span>
+          <button id="decrease-second" class="time-control-btn" value="decrease" disabled>
+            <i class="fas fa-angle-down"></i>
+          </button>
+        </div>
+        <!-- <div id="timer-centiseconds" class="timer-time"></div> -->
+      </div>
+
+      <div id="stopwatch-container"></div>
+
+      <div id="timer-actions">
+        <button id="reset-btn" disabled>
+          <i class="fas fa-undo-alt"></i>
+        </button>
+        <div>
+          <button id="start-btn" disabled>
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="stop-btn" disabled>
+            <i class="fas fa-pause"></i>
+          </button>
+        </div>
+        <button id="alarm-btn">
+            <i class="fas fa-volume-up"></i>
+        </button>
+        <button id="lap-btn" disabled>
+            <i class="far fa-flag"></i>
+        </button>
+      </div>
+    </div>
+    <div id="laps-container"></div>
+  </div>
+  <script src="util.js"></script>
+  <script src="animations.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
