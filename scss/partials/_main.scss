@@ -1,0 +1,223 @@
+// TODO: Responsive media queries
+// TODO: Reset/Alarm/Lap buttons should have a hovered style. Make them circular and make the circle light-gray on hover.
+
+body {
+  @include body-background-color;
+  font-size: $font-base-size;
+  font-family: $font-stack;
+}
+#box-wrapper {
+  background-color: #FFF;
+  border-radius: 9px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 1.5em;
+  position: relative; */
+  margin: 4% auto 2%;
+  /* min-height: 19.4em; */
+  overflow: hidden;
+  width: 28em;
+  @include box-shadow;
+}
+#timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 1.5em;
+  position: relative;
+  min-height: 19.4em;
+}
+/* #box-wrapper,
+#laps-container {
+  background-color: #FFF;
+  border-radius: 9px;
+  width: 28em;
+  -webkit-box-shadow: 0px 10px 108px -24px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 10px 108px -24px rgba(0,0,0,0.5);
+  box-shadow: 0px 10px 108px -24px rgba(0,0,0,0.5);
+} */
+#mode-selection-container {
+  border-bottom: 1px solid #e3e3e3;
+  display: flex;
+  margin-bottom: .5em;
+  width: 100%;
+  button {
+    border: none;
+    color: #3e3880;
+    cursor: pointer;
+    height: 4em;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    width: 100%;
+    :last-child {
+      border-right: none;
+    }
+    i {
+      font-size: 1.1em;
+      margin-right: 0.3em;
+    }
+  }
+}
+#selection-bar {
+  position: absolute;
+  top: 3em;
+  left: 0;
+  height: 3px;
+  width: 33.3%;
+  background-color: #514A9D;
+}
+#timer-container {
+  display: flex;
+  justify-content: center;
+  font-size: 6em;
+  font-weight: 200;
+  text-align: center;
+  width: 100%;
+  > div {
+    display: inline-block;
+    margin: 0 0.1em;
+    width: 1.2em;
+  }
+}
+.timer-time {
+  cursor: default;
+  margin: -0.2em 0;
+  text-align: left;
+}
+#timer-actions {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5em 1em;
+  width: 60%;
+  button {
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.2s;
+  }
+}
+
+#btn-start,
+#btn-stop {
+  border: 0.15em solid;
+  color: #FFF;
+  height: 3em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border-radius: 50%;
+  height: 4em;
+  width: 4em;
+}
+#btn-start {
+  background-color: #514A9D;
+  border-color: transparent;
+  :not([disabled]):hover {
+    background-color:#3e3880;
+    -webkit-box-shadow: 0px 5px 18px -4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 18px -4px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 18px -4px rgba(0,0,0,0.5);
+  }
+  :disabled {
+    background-color: #c2c1cc;
+    cursor: default;
+  }
+  i {
+    left: 0.1em;
+    position: relative;
+  }
+}
+#btn-stop {
+  background-color: #FFF;
+  border-color: #514A9D;
+  color: #514A9D;
+}
+#btn-reset,
+#btn-alarm,
+#btn-lap {
+  background-color: transparent;
+  border: none;
+  color: #514A9D;
+  font-size: 0.9em;
+  width: 2.5rem;
+}
+#btn-reset {
+  text-align: right;
+}
+#btn-reset:disabled,
+#btn-lap:disabled {
+  color: #c2c1cc;
+  cursor: default;
+}
+#timer-actions #btn-alarm {
+  font-size: 1.3em;
+  text-align: left;
+}
+#timer-actions #btn-lap {
+  font-size: 1.2em;
+}
+.timer-time,
+.btn-time-control {
+  display: block;
+}
+.btn-time-control {
+  background-color: transparent;
+  border: none;
+  color: #514A9D;
+  cursor: pointer;
+  font-size: .2em;
+  height: 3rem;
+  position: relative;
+  top: 0;
+  transition: all 0.1s;
+  width: 100%;
+  z-index: 1000;
+}
+.btn-time-control:not([disabled]):hover {
+  font-size: 0.22em;
+}
+.btn-time-control[value="increase"]:not([disabled]):hover {
+  top: -0.1em;
+}
+.btn-time-control[value="decrease"]:not([disabled]):hover {
+  top: 0.1em;
+}
+.btn-time-control:disabled {
+  color: #000;
+  cursor: default;
+  opacity: 0.3;
+}
+
+/* Stopwatch styles */
+#stopwatch-display {
+  font-size: 5em;
+  font-weight: 200;
+  display: block;
+  text-align: left;
+  width: 4.6em;
+}
+.stopwatch-time-block {
+  width: 2em;
+}
+#stopwatch-display .stopwatch-centiseconds {
+  font-size: 0.4em;
+  font-weight: 300;
+}
+#laps-container {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  /* box-sizing: border-box; */
+  margin: 0 auto;
+  width: 100%;
+}
+#laps-container > div {
+  border-top: 1px solid #e3e3e3;
+  display: flex;
+  font-weight: 500;
+  justify-content: space-between;
+  padding: 0.8em 2em;
+}

@@ -11,9 +11,9 @@
 const boxWrapper        = document.getElementById('box-wrapper');
 // Mode selection
 const modeSelectionContainer = document.getElementById('mode-selection-container');
-const timerModeBtn      = document.getElementById('timer-mode-btn');
-const stopwatchModeBtn  = document.getElementById('stopwatch-mode-btn');
-const alarmModeBtn      = document.getElementById('alarm-mode-btn');
+const timerModeBtn      = document.getElementById('btn-timer-mode');
+const stopwatchModeBtn  = document.getElementById('btn-stopwatch-mode');
+const alarmModeBtn      = document.getElementById('btn-alarm-mode');
 const selectionBar      = document.getElementById('selection-bar');
 // Timer display
 const timerContainer    = document.getElementById('timer-container');
@@ -22,7 +22,7 @@ const timerMinutes      = document.getElementById('timer-minutes');
 const timerSeconds      = document.getElementById('timer-seconds');
 const timerCentiseconds = document.getElementById('timer-centiseconds');
 // Timer controls
-const timerControls     = document.querySelectorAll('.time-control-btn');
+const timerControls     = document.querySelectorAll('.btn-time-control');
 const increaseHourBtn   = document.getElementById('increase-hour');
 const increaseMinuteBtn = document.getElementById('increase-minute');
 const increaseSecondBtn = document.getElementById('increase-second');
@@ -34,11 +34,11 @@ const stopwatchContainer = document.getElementById('stopwatch-container');
 const lapsContainer     = document.getElementById('laps-container');
 // Timer actions
 const timerActions      = document.getElementById('timer-actions');
-const startBtn          = document.getElementById('start-btn');
-const stopBtn           = document.getElementById('stop-btn');     
-const resetBtn          = document.getElementById('reset-btn');
-const alarmBtn          = document.getElementById('alarm-btn');
-const lapBtn            = document.getElementById('lap-btn');
+const startBtn          = document.getElementById('btn-start');
+const stopBtn           = document.getElementById('btn-stop');     
+const resetBtn          = document.getElementById('btn-reset');
+const alarmBtn          = document.getElementById('btn-alarm');
+const lapBtn            = document.getElementById('btn-lap');
 
 
 /**
