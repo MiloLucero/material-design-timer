@@ -1,0 +1,91 @@
+/* TYPOGRAPHY */
+
+body {
+  color: $color-text-body;
+  font-size: $font-base-size;
+  font-family: $font-stack-primary;
+}
+
+#timer-container {
+  font-size: 6em;
+  font-weight: 200;
+  text-align: center;
+}
+
+#stopwatch-display {
+  font-size: 5em;
+  font-weight: 200;
+  text-align: left;
+  .stopwatch-centiseconds {
+    font-size: 0.4em;
+    font-weight: 300;
+  }
+}
+
+#laps-container > div {
+  font-weight: 500;
+}
+
+/* Typography: Buttons */
+#mode-selection-container button {
+  color: $color-text-accent;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  i {
+    font-size: 1.1em;
+  }
+}
+
+#btn {
+  &-start,
+  &-stop {
+    color: $white;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  &-stop {
+    color: $color-primary;
+  }
+
+  &-reset,
+  &-alarm,
+  &-lap {
+    color: $color-primary;
+    font-size: 0.9em;
+    &:disabled {
+      color: $color-disabled;
+    }
+  }
+
+  &-reset {
+    font-size: 1em;
+    text-align: right;
+  }
+
+  &-alarm {
+    font-size: 1.3em;
+    text-align: left;
+  }
+
+  &-lap {
+    font-size: 1.2em;
+  }
+}
+
+// Buttons to increase or decrease time
+.btn-time-control {
+  color: $color-primary;
+  font-size: .2em;
+
+  &:not([disabled]):hover {
+    font-size: 0.22em;
+  }
+
+  &:disabled {
+    color: $black;
+  }
+}

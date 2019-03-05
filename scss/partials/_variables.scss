@@ -1,4 +1,25 @@
 // VARIABLES ------------------------------------- /
 
+// Font
 $font-base-size: 16px;
-$font-stack: 'Work Sans', sans-serif;
+$font-stack-primary: 'Work Sans', sans-serif;
+
+// Colors: Descriptive
+$white:          #FFF;
+$black:          #000;
+$black-text:     rgba(0,0,0,.87);
+$gray:           #c2c1cc;
+$light-gray:     #e3e3e3;
+$purple:         #514A9D;
+$dark-purple:    saturate(darken($purple, 9%), 5%);
+$turquoise-blue: #24C6DC;
+
+// Colors: Functional
+$color-primary:      $purple;
+$color-primary-dark: $dark-purple;
+$color-secondary:    $turquoise-blue;
+$color-disabled:     $gray;
+
+$color-text-body:    $black-text;
+$color-text-light:   $gray;
+$color-text-accent:  $dark-purple;
